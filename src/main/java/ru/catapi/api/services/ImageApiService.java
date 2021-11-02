@@ -10,6 +10,9 @@ import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
+/**
+ * Class providing access to image api methods
+ */
 public class ImageApiService {
     private static final RequestSpecification GET_SPEC;
 
@@ -20,6 +23,11 @@ public class ImageApiService {
                 .build();
     }
 
+    /**
+     * Search image by specified breed id
+     * @param breedId - breed id
+     * @return ImageResponse object containing image id, url
+     */
     public static ImageResponse getImageByBreedId(String breedId) {
         Response image =
                 given()

@@ -1,5 +1,8 @@
 package main.java.ru.catapi.api.utils;
 
+/**
+ * CLass for formatting urls
+ */
 public class UrlFormatter {
     public static final String API_BASE_URL = "https://api.thecatapi.com";
     public static final String API_VERSION  = "v1";

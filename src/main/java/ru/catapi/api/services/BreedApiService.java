@@ -9,7 +9,10 @@ import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
-public class BreadApiService {
+/**
+ * Class providing access to breed api methods
+ */
+public class BreedApiService {
     private static final RequestSpecification GET_SPEC;
 
     static {
@@ -19,6 +22,11 @@ public class BreadApiService {
                 .build();
     }
 
+    /**
+     * Search specified breed by name
+     * @param name - breed name
+     * @return found breed id
+     */
     public static String getBreedIdByName(String name) {
         List<String> breedId =
                 given()

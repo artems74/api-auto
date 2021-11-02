@@ -12,6 +12,9 @@ import main.java.ru.catapi.api.utils.UrlFormatter;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+/**
+ * Class providing access to favourites api methods
+ */
 public class FavouriteApiService {
 
     private static final RequestSpecification GET_SPEC;
@@ -26,6 +29,11 @@ public class FavouriteApiService {
         API_KEY = new ApiKeyModel(System.getProperty("apiKey"));
     }
 
+    /**
+     * Place specified image to favourites list
+     * @param id - image id
+     * @return found favourite id
+     */
     public static Integer postFavouriteImageById(String id) {
         return given()
                         .spec(GET_SPEC)
@@ -39,6 +47,10 @@ public class FavouriteApiService {
                 .extract().path("id");
     }
 
+    /**
+     * Get favourites images
+     * @return FavouritesResponse object containing lists of favourites id, images id, images url
+     */
     public static FavouritesResponse getFavouritesImages() {
         Response favourites =
                 given()
@@ -54,10 +66,10 @@ public class FavouriteApiService {
                 favourites.path("url"));
     }
 
-    public static void deleteFavouriteImageByIdIfExist(Integer id) {
-        // TODO: implement method
-    }
-
+    /**
+     * Delete specified image from favourites list
+     * @param id - favourite id
+     */
     public static void deleteFavouriteImageById(Integer id) {
         given()
                 .spec(GET_SPEC)

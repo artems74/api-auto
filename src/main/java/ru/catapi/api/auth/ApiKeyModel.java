@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
 
+/**
+ * Class for storing user api key
+ */
 @Data
 @AllArgsConstructor
 public class ApiKeyModel {
