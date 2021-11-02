@@ -55,7 +55,7 @@ public class FirstTest {
         FavouriteApiService.deleteFavouriteImageById(this.favouriteId);
     }
 
-    @Step("Step 6:")
+    @Step("Step 6: Get favourite images")
     public void getFavouriteImg6Step() {
         FavouritesResponse favouritesResponse = FavouriteApiService.getFavouritesImages();
         Assert.assertFalse(favouritesResponse.getFavouriteId().contains(this.favouriteId));
