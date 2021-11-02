@@ -9,7 +9,7 @@ import main.java.ru.catapi.api.services.ImageApiService;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class FirstTest {
+public class FirstTest extends AbstractTest {
     private String breedId;
     private String imageId;
     private String imageUrl;
@@ -24,6 +24,7 @@ public class FirstTest {
         getFavouriteImg4Step();
         deleteFavouriteImage5Step();
         getFavouriteImg6Step();
+        getResources(breedName, breedId, imageUrl);
     }
 
     @Step("Step 1: Get breed id")

@@ -6,7 +6,7 @@ import main.java.ru.catapi.api.services.CategoryApiService;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SecondTest {
+public class SecondTest extends AbstractTest {
 
     @Test
     public void testMethod() {
