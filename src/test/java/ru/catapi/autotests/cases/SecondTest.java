@@ -16,11 +16,11 @@ public class SecondTest {
     @Step("Step 1: Get Categories list")
     public void getCategoriesId1Step() {
         String expectedCategoryName = "boxes";
-        System.out.println("STEP 4: START");
+        System.out.println("STEP 1: START");
         CategoriesResponse categoriesResponse = CategoryApiService.getCategories();
         System.out.println(categoriesResponse.getId());
         System.out.println(categoriesResponse.getName());
         Assert.assertTrue(categoriesResponse.getName().contains(expectedCategoryName));
-        System.out.println("STEP 4: END");
+        System.out.println("STEP 1: END");
     }
 }
