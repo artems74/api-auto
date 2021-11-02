@@ -9,6 +9,7 @@ public class UrlFormatter {
     public static final String BREADS_METHODS  = "breeds";
     public static final String IMAGES_METHODS  = "images";
     public static final String FAVOURITES_METHODS  = "favourites";
+    public static final String CATEGORIES_METHODS  = "categories";
 
     public static String getBreedsUrl() {
         return String.format("%s/%s/%s/search", API_BASE_URL, API_VERSION, BREADS_METHODS);
@@ -24,5 +25,9 @@ public class UrlFormatter {
 
     public static String getDeleteFavouriteUrl(Integer id) {
         return String.format("%s/%d", getFavouritesUrl(), id);
+    }
+
+    public static String getCategoriesUrl() {
+        return String.format("%s/%s/%s", API_BASE_URL, API_VERSION, CATEGORIES_METHODS);
     }
 }

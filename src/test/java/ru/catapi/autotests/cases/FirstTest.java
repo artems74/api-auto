@@ -1,4 +1,4 @@
-package test.java.ru.catapi.autotests.docs.cases;
+package test.java.ru.catapi.autotests.cases;
 
 import io.qameta.allure.Step;
 import main.java.ru.catapi.api.models.response.FavouritesResponse;
@@ -9,7 +9,7 @@ import main.java.ru.catapi.api.services.ImageApiService;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CatApiTest {
+public class FirstTest {
     private String breedId;
     private String imageId;
     private String imageUrl;
