@@ -10,12 +10,11 @@ public class SecondTest {
 
     @Test
     public void testMethod() {
-        getCategoriesId1Step();
+        getCategoriesId1Step("boxes");
     }
 
     @Step("Step 1: Get Categories list")
-    public void getCategoriesId1Step() {
-        String expectedCategoryName = "boxes";
+    public void getCategoriesId1Step(String expectedCategoryName) {
         CategoriesResponse categoriesResponse = CategoryApiService.getCategories();
         Assert.assertTrue(categoriesResponse.getName().contains(expectedCategoryName));
     }
