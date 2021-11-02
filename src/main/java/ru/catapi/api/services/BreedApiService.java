@@ -1,5 +1,6 @@
 package main.java.ru.catapi.api.services;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
@@ -18,6 +19,7 @@ public class BreedApiService {
     static {
         GET_SPEC = new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
+                .addFilter(new AllureRestAssured())
                 .setBaseUri(UrlFormatter.API_BASE_URL)
                 .build();
     }

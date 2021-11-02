@@ -1,5 +1,6 @@
 package main.java.ru.catapi.api.services;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -20,6 +21,7 @@ public class ImageApiService {
         GET_SPEC = new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
                 .setBaseUri("https://api.thecatapi.com")
+                .addFilter(new AllureRestAssured())
                 .build();
     }
 
